@@ -1,0 +1,34 @@
+{
+  "api": {
+    "base_url": "https://api.onstove.com/store/v1.0/products/search",
+    "default_params": {
+      "q": "",
+      "currency_code": "USD",
+      "page": 1,
+      "size": 36,
+      "direction": "SCORE",
+      "types": "GAME",
+      "rating.board": "GRAC",
+      "price.max": 0,
+      "tag_aggregation_size": 6,
+      "genre_aggregation_size": 6,
+      "on_discount": true
+    }
+  },
+  "discord": {
+    "webhook_url": "YOUR_DISCORD_WEBHOOK_URL_HERE",
+    "bot_name": "STOVE Notify Bot",
+    "embed_color": "ff6e29",
+    "delay_between_notifications": 1
+  },
+  "storage": {
+    "seen_games_file": "storage/seen_games.json",
+    "remove_disappeared_games": true,
+    "renotify_returned_games": false
+  },
+  "logging": {
+    "enabled": true,
+    "echo": false,
+    "file": "logs/stovenotify.log"
+  }
+}
