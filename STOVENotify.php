@@ -64,7 +64,7 @@ class STOVENotify
     private function saveSeenGames()
     {
         $this->ensureStorageDirectory();
-        
+
         $jsonString = $this->customJsonEncode($this->seenGames);
         file_put_contents($this->seenGamesFile, $jsonString);
     }
@@ -73,9 +73,9 @@ class STOVENotify
     {
         $jsonOptions = JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES;
         $jsonString = json_encode($data, $jsonOptions);
-        
+
         $jsonString = preg_replace('/(\d+\.\d{2})\d+/', '$1', $jsonString);
-        
+
         return $jsonString;
     }
 
